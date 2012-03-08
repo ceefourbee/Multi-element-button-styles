@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Buttons</title>
+<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- remember to remove http: -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+<!-- remember to remove http: -->
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<section class="mainContainer grid-6">
+	<header>
+  	<h1>Multi element button styles</h1>
+  </header>
+  
+  <h2>Links</h2>
+  <ul class="btnList">
+    <li><a class="btn active">Link 1</a></li>
+    <li><a class="btn">Link 2</a></li>
+    <li><a class="btn">Link 3</a></li>
+    <li><a class="btn">Link 4</a></li>
+    <li><a class="btn">What if I have a really long link?</a></li>
+  </ul>
+  
+  <h2>Buttons</h2>
+  <ul class="btnList">
+    <li><button class="btn active">Button 1</button></li>
+    <li><button class="btn">Button 2</button></li>
+    <li><button class="btn">Button 3</button></li>
+    <li><button class="btn">Button 4</button></li>
+    <li><button class="btn">What if I have a really long button?</button></li>
+  </ul>
+  
+  <h3>Inputs</h3>
+  <ul class="btnList">
+    <li><input type="button" value="Input 1" class="btn active" /></li>
+    <li><input type="button" value="Input 2" class="btn" /></li>
+    <li><input type="button" value="Input 3" class="btn" /></li>
+    <li><input type="button" value="Input 4" class="btn" /></li>
+    <li><input type="button" value="What if I have a really long input?" class="btn" /></li>
+  </ul>
+  
+  <h3>Mix and match - what crazy fool would do this?</h3>
+  <ul class="btnList">
+    <li><a class="btn active">Link 1</a></li>
+    <li><button class="btn">Button 1</button></li>
+    <li><input type="button" value="Input 1" class="btn" /></li>
+  </ul>
+  <footer>
+  	<p>Made by Barney at <a href="http://ceefourbee.co.uk" title="Visit Barney and say hello">CeeFourBee</a>. Read the post regarding <a href="http://ceefourbee.co.uk" title="Read it and weep">multi element button styles</a>.</p>
+  </footer>
+
+</section><!--end mainContainer-->
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function() {
+	// on .btn click remove class 'active' from every .btn in that list and add class 'active' to clicked .btn
+	$('.btn').click(function (e) {
+		$(this).closest('.btnList').find('.btn').removeClass('active');
+		$(this).addClass('active');
+	});
+});
+// ]]>
+</script>
+</body>
+</html>
