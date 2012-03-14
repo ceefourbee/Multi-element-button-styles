@@ -14,15 +14,21 @@
 <section class="mainContainer grid-6">
 	<header>
   	<h1>Multi element button styles</h1>
+    <p><del>Swing</del> <i>Click</i> away, Merrill</p>
   </header>
+  
+  <h2>Single buttons - so lonely</h2>
+  <a href="#" class="btn">Link 1</a><br />
+  <button class="btn">Button 1</button><br />
+  <input type="button" value="Input 1" class="btn" />
   
   <h2>Links</h2>
   <ul class="btnList">
-    <li><a class="btn active">Link 1</a></li>
-    <li><a class="btn">Link 2</a></li>
-    <li><a class="btn">Link 3</a></li>
-    <li><a class="btn">Link 4</a></li>
-    <li><a class="btn">What if I have a really long link?</a></li>
+    <li><a href="#" class="btn active">Link 1</a></li>
+    <li><a href="#" class="btn">Link 2</a></li>
+    <li><a href="#" class="btn">Link 3</a></li>
+    <li><a href="#" class="btn">Link 4</a></li>
+    <li><a href="#" class="btn">What if I have a really long link?</a></li>
   </ul>
   
   <h2>Buttons</h2>
@@ -45,10 +51,11 @@
   
   <h3>Mix and match - what crazy fool would do this?</h3>
   <ul class="btnList">
-    <li><a class="btn active">Link 1</a></li>
+    <li><a href="#" class="btn active">Link 1</a></li>
     <li><button class="btn">Button 1</button></li>
     <li><input type="button" value="Input 1" class="btn" /></li>
   </ul>
+   
   <footer>
   	<p>Made by Barney at <a href="http://ceefourbee.co.uk" title="Visit Barney and say hello">CeeFourBee</a>. Read the post regarding <a href="http://ceefourbee.co.uk" title="Read it and weep">multi element button styles</a>.</p>
   </footer>
@@ -58,7 +65,7 @@
 // <![CDATA[
 $(document).ready(function() {
 	// on .btn click remove class 'active' from every .btn in that list and add class 'active' to clicked .btn
-	$('.btn').click(function (e) {
+	$('.btnList .btn').click(function (e) {
 		$(this).closest('.btnList').find('.btn').removeClass('active');
 		$(this).addClass('active');
 	});
