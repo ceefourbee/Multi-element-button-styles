@@ -231,20 +231,28 @@ footer {
 	margin: .5em .875em .5em 0;
 	padding: .5em .875em;
 	border: 1px solid #999;
-	background-color: #f0f0f0;
 	white-space: nowrap;
 	font: 700 .75em Arial, Helvetica, sans-serif;
 	text-align: center;
+	text-shadow: 0 1px 0 #FFF;
 	-webkit-border-radius: 4px;
 		 -moz-border-radius: 4px;
 					border-radius: 4px;
 	-webkit-box-shadow: 0 0 2px rgba(0,0,0,.3);
 		 -moz-box-shadow: 0 0 2px rgba(0,0,0,.3);
 					box-shadow: 0 0 2px rgba(0,0,0,.3);
-	-webkit-transition: all .7s;
+	-webkit-transition: all .7s; /* Subject to Chrome's visited link transition bug */
 		 -moz-transition: all .7s;
 		 	 -o-transition: all .7s;
-				 	transition: all .7s;
+				 	transition: all .7s;				
+	background: #F0F0F0;
+	background: rgb(240,240,240);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(241,241,241,1)), 		color-stop(51%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+	background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
 }
 /* Clear fix for modern browsers */
 .btnList:before,
@@ -309,7 +317,7 @@ a.btn,
 .btnList li .btn.active {
 	border-color: #777;
 	color: #0066CF;
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3) inset;
-		 -moz-box-shadow: 0 0 5px rgba(0,0,0,.3) inset;
-					box-shadow: 0 0 5px rgba(0,0,0,.3) inset;
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.5) inset;
+		 -moz-box-shadow: 0 0 5px rgba(0,0,0,.5) inset;
+					box-shadow: 0 0 5px rgba(0,0,0,.5) inset;
 }
